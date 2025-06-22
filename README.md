@@ -39,9 +39,16 @@ An Essence is a unit of application logic. This is where the developer using the
 - Runs in a "sandboxed" environment, with controlled access to the Engine's Canons through a dedicated interface.
 - Can be enabled, disabled, and configured via "Blueprints."
 
-## 3. Project Structure
+## 3. How to Use
 
-The framework is organized within `ReplicatedStorage` to be accessible by both the server and (potentially) the client.
+This repository is structured to separate the core framework from a practical example.
+
+*   **`/framework`**: Contains the core Prometheus Epsilon engine. This is the folder you will copy into your own Roblox project, typically within `ReplicatedStorage`.
+*   **`/example`**: Contains a complete, working example project that demonstrates how to use the framework. You can use this as a reference or a starting point for your own game. It includes an example `default.project.json` for Rojo users.
+
+## 4. Framework Structure
+
+The framework itself is organized to be placed within `ReplicatedStorage`.
 
 ```
 ReplicatedStorage
@@ -63,7 +70,7 @@ ReplicatedStorage
         └── StateManager.luau
 ```
 
-## 4. Startup Workflow
+## 5. Startup Workflow
 
 1.  A server script (e.g., in `ServerScriptService`) `require`s the `Engine.luau`.
 2.  It calls `Engine:Initialize(config, blueprints, essenceRoot)`.
@@ -114,7 +121,7 @@ graph TD
     end
 ```
 
-## 5. Project Status & V1 Roadmap
+## 6. Project Status & V1 Roadmap
 
 This section provides a high-level overview of the current status of the Prometheus Epsilon framework and the roadmap for its official V1 release.
 
