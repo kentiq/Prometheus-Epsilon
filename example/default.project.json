@@ -1,14 +1,26 @@
 {
-  "name": "Prometheus Epsilon",
+  "name": "PrometheusEpsilon-Example",
   "tree": {
     "$className": "DataModel",
 
     "ReplicatedStorage": {
-      "$path": "src/ReplicatedStorage"
+      "$className": "ReplicatedStorage",
+      "PrometheusEpsilon": {
+        "$path": "../framework/PrometheusEpsilon"
+      },
+      "EpsilonEssences": {
+        "$path": "EpsilonEssences"
+      },
+      "MyEpsilonEssenceBlueprints": {
+        "$path": "MyEpsilonEssenceBlueprints.luau"
+      }
     },
 
     "ServerScriptService": {
-      "$path": "src/ServerScriptService"
+      "$className": "ServerScriptService",
+      "StartEngine": {
+        "$path": "StartEngine.server.luau"
+      }
     },
 
     "StarterPlayer": {
