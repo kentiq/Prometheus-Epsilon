@@ -1,0 +1,35 @@
+# General
+.DS_Store
+.build
+
+# Roblox
+*.rbxl
+*.rbxlx
+*.rbxl.lock
+*.rbxlx.lock
+
+# Rojo
+build/
+*.rbxm
+*.rbxmx
+
+# Wally
+Packages/
+Packages.index.json
+wally.lock
+wally.toml
+
+# Editor/Tool specific
+.vscode/
+.idea/
+*.luau-analyze-cache/
+.luacheckrc
+selene.toml
+stylua.toml
+roblox-ts/
+include/
+lib/
+node_modules/
+package-lock.json
+tsconfig.json
+types/
