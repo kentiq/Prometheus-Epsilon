@@ -39,14 +39,30 @@ An Essence is a unit of application logic. This is where the developer using the
 - Runs in a "sandboxed" environment, with controlled access to the Engine's Canons through a dedicated interface.
 - Can be enabled, disabled, and configured via "Blueprints."
 
-## 3. How to Use
+## 3. Repository Structure
+
+```
+/
+├── framework/              # The core, engine-only framework
+│   └── PrometheusEpsilon/
+├── example/                # A full, working example project
+│   ├── client/
+│   ├── EpsilonEssences/
+│   ├── MyEpsilonEssenceBlueprints.luau
+│   ├── StartEngine.server.luau
+│   └── default.project.json
+├── .gitignore
+└── README.md
+```
+
+## 4. How to Use
 
 This repository is structured to separate the core framework from a practical example.
 
-*   **`/framework`**: Contains the core Prometheus Epsilon engine. This is the folder you will copy into your own Roblox project, typically within `ReplicatedStorage`.
-*   **`/example`**: Contains a complete, working example project that demonstrates how to use the framework. You can use this as a reference or a starting point for your own game. It includes an example `default.project.json` for Rojo users.
+*   **`/framework`**: Contains the core Prometheus Epsilon engine. To use it in your game, copy the `PrometheusEpsilon` folder into your project's `ReplicatedStorage`.
+*   **`/example`**: Contains a complete project that demonstrates how to use the framework. It is **Rojo-ready**. To use it, navigate into the `/example` directory and run `rojo serve`. This will sync the framework and the example scripts into Roblox Studio for a live-testing environment.
 
-## 4. Framework Structure
+## 5. Framework Structure
 
 The framework itself is organized to be placed within `ReplicatedStorage`.
 
@@ -70,7 +86,7 @@ ReplicatedStorage
         └── StateManager.luau
 ```
 
-## 5. Startup Workflow
+## 6. Startup Workflow
 
 1.  A server script (e.g., in `ServerScriptService`) `require`s the `Engine.luau`.
 2.  It calls `Engine:Initialize(config, blueprints, essenceRoot)`.
@@ -121,7 +137,7 @@ graph TD
     end
 ```
 
-## 6. Project Status & V1 Roadmap
+## 7. Project Status & V1 Roadmap
 
 This section provides a high-level overview of the current status of the Prometheus Epsilon framework and the roadmap for its official V1 release.
 
